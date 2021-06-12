@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic Game</title>
+  <link rel="shortcut icon" href="assets/media/icons8-magic-crystal-ball-100.png" />
+  <link rel="stylesheet" href="./assets/styles.css">
+
+</head>
+<body>
+  <div id="content">
+    <h1>Welcome to the Magic Game!</h1>
+    <h2>You ask the questions, I answer all of them !</h2>
+    <h2>Magic 8 ball</h2>
+    <p id="info">Ask me what you want to know and click on the Magic 8 Ball</p>
+    <input type="text" id="question" />
+  </div>
+  <div id="eight-ball" class="eight-ball">
+    <div class="answer">
+      <p id="eight">8</p>
+      <p id="answer"></p>
+    </div>
+  </div>
+  
+  <script type="text/javascript">        
+    window.onload = function () {
+      let eight = document.getElementById("eight");
+      let answer = document.getElementById("answer");
+      let eightball = document.getElementById("eight-ball");
+      let question = document.getElementById("question");
+
+     eightball.addEventListener("click", function () {
+        if (question.value.length < 1) {
+          alert('Enter a question!');
+        }
+        else {
+          alert("Loading Please Be Patient!");  3000;
+          eight.innerText = "";                           
+        
+  const randomNumber = Math.floor(Math.random () * 20);
+  switch (randomNumber) {
+  case 0:
+    answer1 = 'It is certain.'
+    break;
+  case 1:
+    answer1 = 'It is decidedly so.'
+    break;
+  case 2:
+    answer1 = 'Without a doubt.'
+    break;
+  case 3:
+   answer1 = 'Yes - definitely.'
+    break;
+  case 4:
+    answer1 = 'You may rely on it.'
+    break;
+  case 5:
+    answer1 = 'As I see it, yes.'
+    break;
+  case 6:
+    answer1 = 'Most likely.'
+    break;
+  case 7:
+    answer1 = 'Outlook good.'
+    break;
+  case 8:
+  answer1 = 'Yes.'
+    break;
+    case 9:
+    answer1 = 'Signs point to yes.'
+    break;
+  case 10:
+    answer1 = 'Reply hazy, try again.'
+    break;
+  case 11:
+    answer1 = 'Ask again later.'
+    break;
+  case 12:
+    answer1 = 'Better not tell you now.'
+    break;
+  case 13:
+    answer1 = 'Cannot predict now.'
+    break;
+  case 14:
+    answer1 = 'Concentrate and ask again.'
+    break;
+  case 15:
+    answer1 = 'Concentrate and ask again.'
+    break;
+  case 16:
+    answer1 = 'My sources say no.'
+    break;
+  case 17:
+    answer1 = 'Outlook not so good.'
+    break;
+  case 18:
+    answer1 = 'Very doubtful.'
+    break;
+} 
+answer.innerText = answer1 ;
+        }
+      });
+    };
+  </script>
+</body>
+</html>
